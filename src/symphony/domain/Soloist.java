@@ -1,86 +1,85 @@
 package symphony.domain;
 
 import symphony.domain.Address;
-//import symphony.domain.Name;
+
 import symphony.domain.Person;
 import symphony.domain.Phone;
 
 public class Soloist extends Person {
 	
 	/**
+	 * 
+	 *Site
+ 	 *Time
+ 	 *Hour
+ 	 *Minute
+ 	 *Soloist
+	 * 
 	 * A Soloist is a Person object, therefore have a Name object associated with it
 	 * it also has an Address
 	 * also a phone
 	 * 
-	 * @param 	name			Name
-	 * @param 	address			Address
-	 * @param 	phone			Phone
-	 * @param 	expertise		String
+	 * An Address Class and Address Class and a Phone Class should be made 
+	 * 
+	 * 
+	 * @param 	inputname			String
+	 * @param 	inputaddress	    String
+	 * @param 	inputphone			Phone
+	 * @param 	inputexpertise		String
 	 */
 	
-	private int id;
+	private String soloistId;
+	private String soloexpertise; // this is the specalization.
+	//could have arry or Hashmap to check if vaild expert
 	
-	public Soloist(int id, String name, String address, Phone phone) {
-		super(name, address, phone);
-		this.id = id;
+	public Soloist(String inputid, String inputname, String inputaddress, String inputphone) {
+		//so first you have to make a Person with a name and an address and a Phone, before making a 
+		//Soloist
+		super(inputname, inputaddress, inputphone);
+		soloistId = inputid;
 		
 	}
 	
-	public void setId(int id) {
-		this.id = id;
+	public void setId(String inputid) {
+		soloistId  = inputid;
 	}
 
-	public int getId() {
-		return this.id;
+	public String getId() {
+		/**
+		 * returns the id of the Soloist
+		 * 
+		 *
+		 * @param 	id		String
+		 */
+		return soloistId;
 	}
+	
+	public void setSoloistexpertise(String expertiseInput){
+		//Input the soloist's expertise
+		soloexpertise=expertiseInput;
+		
+	}
+	
+	public String getSoloistexpertise(){
+		/**
+		 * returns specialization of Soloist
+		 * if none, then assgins Generalist
+		 *
+		 *
+		 * @return  soloexpertise    String
+		 */
+		//Input the soloist's expertise
+		if (soloexpertise.isEmpty()){
+			soloexpertise="Generalist";
+		}
+		
+		return soloexpertise;
+		
+	}
+
+
+
 }
 
-/*
-public class Soloist extends Person {
-	
-	
-	
-	/**
-	 * Soloist uses the super constructor from person to set Name, Address, and Phone.
-	 * It makes use of Name, Address, and Phone.
-	 * This constructor also sets expertise which is a String.
-	 * 
-	 * @param 	name			Name
-	 * @param 	address			Address
-	 * @param 	phone			Phone
-	 * @param 	expertise		String
-	 */
-	//public Soloist(Name name, Address address, Phone phone, String expertise) {
-	//	super(name, address, phone);
-	//	this.expertise = expertise;
-//	}
 
-
-	
-	/**
-	 * Get a String that holds the expertise of the Soloist.
-	 * 
-	 * @return	String
-	 */
-	//public String getExpertise() {
-	//	return this.expertise;
-	//}
-
-	
-	/**
-	 * Set the String that holds the expertise of the Soloist.
-	 * 
-	 * @param 	expertise	String
-	 */
-	//public void setExpertise(String expertise) {
-	//	this.expertise = expertise;
-	////}
-
-											
-
-	
-	//private String expertise;
-
-
-//}	
 

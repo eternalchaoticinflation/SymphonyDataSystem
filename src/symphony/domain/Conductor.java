@@ -1,16 +1,16 @@
 package symphony.domain;
 
 public class Conductor extends Person {
-	private String id;
+	private String conductorId;
 	
-	public Conductor(String id, String name, String address, Phone phone) {
-		super(name, address, phone);
-		this.id = id;
+	public Conductor(String id, String name, String address, String conductorphoneinput) {
+		super(name, address, conductorphoneinput);
+		conductorId = id;
 	}	
 	void setId(String id) {
-		this.id = id;
+		conductorId = id;
 	}
 	String getId() {
-		return this.id;
+		return conductorId;
 	}	
 }

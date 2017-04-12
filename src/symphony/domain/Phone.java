@@ -40,7 +40,7 @@ public class Phone {
 	 * @return phonenumber 
 	 *************************************************************/
 	public String getphonenumber() {
-		return phonenumber;
+		return (phonenumber.substring(0, 3)+" "+phonenumber.substring(3, 6)+"-"+phonenumber.substring(6));
 	}
 	
 	
@@ -61,7 +61,7 @@ public class Phone {
 		 * @param inputnumber
 		 * @return validphonenumber 
 		 *************************************************************/
-		if (phonenumber.matches("[0-9]+") && phonenumber.length() == 10){
+		if (phonenumber.matches("[0-9]+") && phonenumber.length() == 10 ){
 			//check further
 			validphonenumber=true;
 		}

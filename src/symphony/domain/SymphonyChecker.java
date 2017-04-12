@@ -19,6 +19,8 @@ public class SymphonyChecker {
 		System.out.println("number3 is : "+number3.isvalidphonenumber()+"\n");
 		System.out.println("number4 is : "+number4.isvalidphonenumber()+"\n");
 		
+		System.out.println("number4's number is : "+number4.getphonenumber().substring(2)+"\n");
+		
 	}
 
 }

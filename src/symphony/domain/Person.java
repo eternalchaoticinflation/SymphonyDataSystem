@@ -4,10 +4,10 @@ public class Person {
 
 private PersonalInfo info;
 
-public Person(String name, String address, Phone phone) {
+public Person(String name, String address, String phonenumberinput) {
 	info.setName(name);
 	info.setAddress(address);
-	info.setPhone(phone);
+	info.setPhone(phonenumberinput);
 }
 
 void setName(String name) {
@@ -16,8 +16,8 @@ void setName(String name) {
 void setAddress(String address) {
 	info.setAddress(address);
 }
-void setPhone(Phone phone) {
-	info.setPhone(phone);
+void setPhone(String phonenumberinput) {
+	info.setPhone(phonenumberinput);
 }
 void setEmail(String email) {
 	info.setEmail(email);
@@ -29,7 +29,7 @@ String getName() {
 String getAddress() {
 	return info.getAddress();
 }
-Phone getPhone() {
+String getPhone() {
 	return info.getPhone();
 }
 String getEmail() {

@@ -2,18 +2,19 @@ package symphony.domain;
 
 public class Address {
 private String address;
-private String postal;
+private PostalCode postal;
 
-void setAddress(String address) {
-	this.address = address;
+void setAddress(String inaddress) {
+	this.address = inaddress;
 }
-void setPostal(String postal) {
-	this.postal = postal;
+void setPostal(String inpostalCode) {
+	postal = new PostalCode (inpostalCode);
 }
 String getAddress() {
-	return this.address;
+	return address;
 }
 String getPostal() {
-	return this.postal;
+	
+	return postal.getCode();
 }
 }

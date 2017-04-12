@@ -4,15 +4,16 @@ public class Contact {
 private Phone phone;
 private String email;
 
-void setPhone(Phone phone) {
-	this.phone = phone;
+void setPhone(String phonenumberin) {
+	
+	phone = new Phone(phonenumberin);
 }
 void setEmail(String email) {
 	this.email = email;
 }
-Phone getPhone() {
+String getPhone() {
 	
-	return phone;
+	return phone.getphonenumber();
 }
 String getEmail() {
 	return email;

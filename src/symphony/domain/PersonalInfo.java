@@ -18,8 +18,8 @@ void setName(String name) {
 void setAddress(String address) {
 	this.address.setAddress(address);
 }
-void setPhone(Phone phone) {
-	contact.setPhone(phone);
+void setPhone(String phonenumin) {
+	contact.setPhone(phonenumin);
 }
 void setEmail(String email) {
 	contact.setEmail(email);
@@ -30,7 +30,7 @@ String getName() {
 String getAddress() {
 	return this.address.getAddress();
 }
-Phone getPhone() {
+String getPhone() {
 	return this.contact.getPhone();
 }
 String getEmail() {
