@@ -1,26 +1,64 @@
 package symphony.domain;
 
-public class Time {
+public class Time implements ValidClass {
 private Hour hour;
 private Minute min;
 
-Time(int hour, int min) {
-	this.hour.setHour(hour);
-	this.min.setMin(min);
+
+public Time() {
+	hour=new Hour(0);
+	min=new Minute(0);
+	hour.setHour(0);
+	min.setMin(0);
 }
-void setHour(int hour) {
-	this.hour.setHour(hour);
+
+public Time(int hourcon, int mincon) {
+	this.hour=new Hour(hourcon);
+	this.min=new Minute(mincon);
+	min.setMin(mincon);
+	hour.setHour(hourcon);
+
 }
-void setMin(int min) {
-	this.min.setMin(min);
+public Time(Hour ohour, Minute omin) {
+	hour=ohour;
+	min= omin;
+	
+}
+
+public Time(int hourcon, Minute omin) {
+	hour=new Hour();
+	hour.setHour(hourcon);
+	min= omin;
+	
+}
+
+public Time(Hour ohour, int mincon) {
+	hour=ohour;
+	min=new Minute();
+	min.setMin(mincon);
+	
+}
+
+void setHour(int hourinput) {
+	hour.setHour(hourinput);
+}
+void setMin(int mininput) {
+	min.setMin(mininput);
 }
 int getHour() {
-	return this.hour.getHour();
+	return hour.getHour();
 }
 int getMin() {
-	return this.min.getMin();
+	return min.getMin();
 }
+@Override
 public String toString() {
-	return getHour() + ":" + getMin();
+	//contains methods that will display this like 19:09
+	return hour.getHourString() + ":" + min.getMinString();
+}
+@Override
+public boolean isValid() {
+	hour.setHour(hour.getHour());
+	return hour.isValid()&&min.isValid();
 }
 }

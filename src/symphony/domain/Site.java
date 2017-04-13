@@ -13,7 +13,7 @@ public class Site extends Address{
 	 * @param 	constructaddress			String
 	 * @param 	constructPostal	 		   	String
 	 * @param 	seats						int
-	 * @param 	inputexpertise				String
+	 * 
 	 */
 	public Site(){
 		super();

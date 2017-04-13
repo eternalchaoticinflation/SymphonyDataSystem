@@ -1,6 +1,6 @@
 package symphony.domain;
 
-public class PostalCode {
+public class PostalCode implements ValidClass{
 	String firstseg;
 	String secondseg;
 	String codelatch;
@@ -51,11 +51,14 @@ public class PostalCode {
 		}
 		
 	}
-	public boolean isValidCode(){
-		return validCode;
-		}
+	
 	
 	public String getCode(){
 	return totalCode;
+	}
+	@Override
+	public boolean isValid() {
+		return validCode;
+		
 	}
 }

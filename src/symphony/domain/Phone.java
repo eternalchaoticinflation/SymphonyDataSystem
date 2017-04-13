@@ -10,7 +10,7 @@
  * **************************************************************/
 package symphony.domain;
 
-public class Phone {
+public class Phone implements ValidClass {
 	
 	private String phonenumber;
 	private boolean validphonenumber=false;
@@ -53,8 +53,10 @@ public class Phone {
 		this.phonenumber = inputnumber.replaceAll("[\\s\\-() ]", "");;
 	}	
 	
-	public boolean isvalidphonenumber(){
-		
+	
+
+	@Override
+	public boolean isValid() {
 		/**
 		 * check a real phonenumber length 10 containing only numbers
 		 * else returns false.
