@@ -4,6 +4,12 @@ public class Person {
 
 private PersonalInfo info;
 
+public Person(){
+	info.setName("");
+	info.setAddress("");
+	info.setPhone("");
+}
+
 public Person(String name, String address, String phonenumberinput) {
 	info.setName(name);
 	info.setAddress(address);

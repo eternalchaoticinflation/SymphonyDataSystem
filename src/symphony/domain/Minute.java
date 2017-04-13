@@ -1,4 +1,34 @@
+/* **************************************************************
+ 
+ * CST 8288  Project 1 
+ * 
+ * Author: Wei Cui
+ * Student #: 040875956
+ * Phone class
+ *
+ *  
+ * **************************************************************/
+
 package symphony.domain;
+
+/**
+ *  
+ * A Minute object implements ValidClass
+ * it also has an isValid() method overrides interface,
+ * setters and constructors can take integer, double and String.
+ * changes all argument to integer.
+ * checks to see if it is a valid minute, not negative, not <59 minutes, not over 60 minutes 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @param 	min         	    int
+ * @param 	minuteinput			double
+ * @param 	minuteinput			int
+ * @param 	minuteinput			String
+ * @param 	validminute 		boolean
+ */
 
 public class Minute implements ValidClass {
 	private int min;
@@ -31,6 +61,15 @@ public class Minute implements ValidClass {
 	}
 
 	public void setMin(int mininput) {
+		/*** 
+		 * Takes mininput as input and uses if else conditions to check, if it is a valid Minute.
+		 * if it is not validminute is false 
+		 * 
+		 * @param 	minuteinput			int
+		 *
+		 * @param 	validminute 		boolean
+		 */
+		
 		
 		if (mininput<=59 && mininput >=0){
 			validminute=true;//could use dialog alerts and while loop

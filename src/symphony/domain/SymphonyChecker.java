@@ -1,3 +1,5 @@
+
+
 package symphony.domain;
 
 public class SymphonyChecker {
@@ -22,7 +24,7 @@ public class SymphonyChecker {
 		Time testTime2=new Time(24, 59);
 		Time testTime3=new Time(100, 59);
 		Time testTime4=new Time(hnine, ten);
-		Time testTime5=new Time(hnine, 60);
+		Time testTime5=new Time(hnine, -6);
 		
 		System.out.println("Minute nine is : "+nine.getMinString()+"\n");
 		System.out.println("Minute ten is : "+ten.getMinString()+"\n");

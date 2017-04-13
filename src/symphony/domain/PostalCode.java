@@ -1,4 +1,14 @@
 package symphony.domain;
+/* **************************************************************
+
+ * CST 8288  Project 1 
+ * 
+ * Author: Wei Cui
+ * Student #: 040875956
+ * Phone class
+ *
+ *  
+ * **************************************************************/
 
 public class PostalCode implements ValidClass{
 	String firstseg;

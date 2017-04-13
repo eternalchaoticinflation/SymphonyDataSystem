@@ -8,13 +8,7 @@ import symphony.domain.Phone;
 public class Soloist extends Person {
 	
 	/**
-	 * 
-	 *Site
- 	 *Time
- 	 *Hour
- 	 *Minute
- 	 *Soloist
-	 * 
+	 *  
 	 * A Soloist is a Person object, therefore have a Name object associated with it
 	 * it also has an Address
 	 * also a phone
@@ -31,6 +25,9 @@ public class Soloist extends Person {
 	private String soloistId;
 	private String soloexpertise; // this is the specalization.
 	//could have arry or Hashmap to check if vaild expert
+	public Soloist(){
+		super();
+	}
 	
 	public Soloist(String inputid, String inputname, String inputaddress, String inputphone) {
 		//so first you have to make a Person with a name and an address and a Phone, before making a 
